@@ -9,7 +9,7 @@ info:
 servers:
   - url: https://api.example.com/v1
     description: Production Server (HTTPS)
-  - url: http://localhost:5000/v1
+  - url: https://localhost:5000/v1
     description: Local Development Server
 
 tags:
