@@ -216,4 +216,31 @@ components:
           example: "2026-10-08"
         assigneeId:
           type: string
-          example: "usr_99
+          example: "usr_9988"
+
+    UpdateTaskInput:
+      type: object
+      properties:
+        title:
+          type: string
+          minLength: 1
+          maxLength: 255
+          example: "Cập nhật tài liệu API"
+        status:
+          type: string
+          enum: [open, in_progress, done]
+          example: "in_progress"
+        priority:
+          type: string
+          enum: [low, normal, high]
+          example: "high"
+
+  responses:
+    BadRequest:
+      description: Yêu cầu không hợp lệ
+    Unauthorized:
+      description: Chưa xác thực hoặc Token không hợp lệ
+    NotFound:
+      description: Không tìm thấy tài nguyên
+    ValidationError:
+      description: Dữ liệu gửi lên không đúng định dạng schema
